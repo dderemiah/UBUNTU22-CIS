@@ -62,7 +62,7 @@
     - level1-server
     - level1-workstation
     - patch
-    - rule_5.3.3.3.2
+    - rule_5.3.3.3.3
     - pam
   block:
     - name: "5.3.3.3.3 | AUDIT | Ensure pam_pwhistory includes use_authtok | Check existing files"

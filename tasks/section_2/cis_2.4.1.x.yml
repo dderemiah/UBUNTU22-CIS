@@ -156,7 +156,7 @@
       ansible.builtin.file:
         path: /etc/cron.allow
         owner: root
-        group: root
+        group: crontab
         mode: 'u-x,g-wx,o-rwx'
         access_time: preserve
         modification_time: preserve
