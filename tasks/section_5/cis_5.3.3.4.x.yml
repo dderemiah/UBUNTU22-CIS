@@ -15,7 +15,7 @@
     - name: "5.3.3.4.1 | PATCH | Ensure pam_unix does not include nullok | capture state"
       ansible.builtin.shell: |
         set -o pipefail
-        grep -E "pam_unix.so.*nullok" /etc/pam.d/common-* /usr/share/pam-configs/* | cut -d ':' -f1 | uniq
+        grep -E "pam_unix.so.*nullok" /etc/pam.d/common-{password,auth,account,session,session-noninteractive} /usr/share/pam-configs/* | cut -d ':' -f1 | uniq
       args:
         executable: /bin/bash
       changed_when: false
