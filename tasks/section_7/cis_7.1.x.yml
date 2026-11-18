@@ -81,7 +81,7 @@
   ansible.builtin.file:
     path: /etc/shadow
     owner: root
-    group: root
+    group: shadow
     mode: 'u-x,g-wx,o-rwx'
 
 - name: "7.1.6 | PATCH | Ensure access to /etc/shadow- is configured"
@@ -97,7 +97,7 @@
   ansible.builtin.file:
     path: /etc/shadow-
     owner: root
-    group: root
+    group: shadow
     mode: 'u-x,g-wx,o-rwx'
   failed_when: discovered_shadows_hyphen_file_exists.state not in '[ file, absent ]'
   register: discovered_shadows_hyphen_file_exists
@@ -115,7 +115,7 @@
   ansible.builtin.file:
     path: /etc/gshadow
     owner: root
-    group: root
+    group: shadow
     mode: 'u-x,g-wx,o-rwx'
 
 - name: "7.1.8 | PATCH | Ensure access to /etc/gshadow- is configured"
@@ -131,7 +131,7 @@
   ansible.builtin.file:
     path: /etc/gshadow-
     owner: root
-    group: root
+    group: shadow
     mode: 'u-x,g-wx,o-rwx'
   failed_when: discovered_gshadow_hyphen_file_exists.state not in '[ file, absent ]'
   register: discovered_gshadow_hyphen_file_exists
